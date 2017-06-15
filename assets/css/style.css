@@ -1,0 +1,242 @@
+/* BASE DU SITE */
+
+html, body{
+    background-color: dimgrey;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+/* HEADER */
+
+header{
+    height: 10vh;
+    width: 100vw;
+    line-height: 10vh;
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+header a{
+    text-decoration: none;
+    color: black
+}
+
+logo {
+    width: 20vw;
+    height: 10vh
+}
+
+nav {
+    width: 40vw;
+    height:  10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+nav a{
+    text-decoration: none;
+    color: black
+}
+
+/* CONTENU DU SITE */
+
+/* PARALLAX */
+
+.parallax {
+    width: 100vw;
+    height: 90vh;
+    padding-top: 10vh;
+    background: url("../images/paul-smith-192401.jpg") 0 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+.presentation {
+    width: 50vw;
+    height: 50vh;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    background-color: rgba(160, 157, 157, 0.7);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+/* SERVICES & PRODUITS */
+
+#serv{
+    height: 90vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.services{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row
+}
+
+.services div{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    background-color: white;
+    transition: 200ms linear
+}
+
+/* PRODUITS & ACCORDEON */
+
+.products{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding-top: 10vh
+}
+
+.subbed{
+    display: none;
+    color: #fff;
+    margin: 2vh 5vw;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,.5)
+}
+
+.product{
+    flex: 1;
+    transition: .4s ease-in-out;
+    transform: skewX(-5deg);
+    overflow: hidden;
+    display: flex;
+    border-left: 4px solid #fff
+}
+
+[data-slide].product:hover, [data-slide].product:focus{
+    flex: 8
+}
+
+[data-slide].product:hover .subbed, [data-slide].product:focus .subbed{
+    display: block
+}
+
+.product:first-child{
+    border-left: 0;
+    flex: 1.25;
+    margin-left: -3em
+}
+
+.product:last-child{
+    flex: 1.25;
+    margin-right: -3em
+}
+
+.subproduct{
+    transform: skewX(5deg);
+    padding: 4em;
+    background-size: cover;
+    margin: 0 -3em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+[data-slide="1"] .subproduct{
+    background-image: url(http://www.ps4france.com/wp-content/uploads/2016/04/No-Mans-Sky.png);
+}
+
+[data-slide="2"] .subproduct{
+    background-image: url(http://cooldown.fr/wp-content/uploads/2016/05/no-mans-sky-min%C3%A9raux.jpg);
+}
+
+[data-slide="3"] .subproduct{
+    background-image: url(https://image.noelshack.com/fichiers/2017/10/1488969676-no-mans-sky.jpg);
+}
+
+[data-slide="4"] .subproduct{
+    background-image: url(http://cooldown.fr/wp-content/uploads/2016/05/no-mans-sky-montagnes.jpg);
+}
+
+[data-slide="5"] .subproduct{
+    background-image: url(http://cdn.wccftech.com/wp-content/uploads/2015/08/No-Mans-Sky-Gamescom-17.jpg);
+}
+
+[data-slide="6"] .subproduct{
+    background-image: url(http://www.ps4france.com/wp-content/uploads/2016/04/No-Mans-Sky.png);
+}
+
+[data-slide="7"] .subproduct{
+    background-image: url(http://cooldown.fr/wp-content/uploads/2016/05/no-mans-sky-min%C3%A9raux.jpg);
+}
+
+[data-slide="8"] .subproduct{
+    background-image: url(https://image.noelshack.com/fichiers/2017/10/1488969676-no-mans-sky.jpg);
+}
+
+.titlesubbed{
+    margin: 0 5vw;
+    color: #fff;
+    font-weight: 100;
+    font-size: 4rem;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,.5)/*;
+        transform: rotate(-85deg)*/
+}
+
+/* CONTACT */
+
+#contact{
+    padding: 20vh;
+    height: 90vh;
+    text-align: center
+}
+
+form{
+    margin: auto;
+    width: 53vw
+}
+
+form input{
+    display: block;
+    width: 25vw;
+    margin: 0
+}
+
+input[name="name"], input[name="mel"], label{
+    float: left
+}
+
+input[name="company"]{
+    width: 51vw
+}
+
+select{
+    float: right;
+    margin-right: 1vw
+}
+
+input[name="content"]{
+    width: 51vw;
+    height: 20vh
+}
