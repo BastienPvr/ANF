@@ -1,12 +1,16 @@
 /* BASE DU SITE */
 
+*{
+    font-family: 'Roboto', sans-serif
+}
+
 html, body{
     background-color: dimgrey;
     width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden
+    overflow-y: scroll
 }
 
 /* HEADER */
@@ -16,7 +20,7 @@ header{
     width: 100vw;
     line-height: 10vh;
     background-color: white;
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     display: flex;
     justify-content: space-around;
@@ -67,16 +71,21 @@ nav a{
 .presentation {
     width: 50vw;
     height: 50vh;
-    padding: 5vh 5vw;
+    padding: 3vh 5vw;
     box-sizing: border-box;
     background-color: rgba(160, 157, 157, 0.7);
     color: white;
-    font-size: 30px;
-    text-align: center;
+    font-size: 20px;
+    text-align: justify;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    text-shadow: 1px 1px 2px black
+}
+
+h1{
+    font-size: 40px
 }
 
 /* SERVICES & PRODUITS */
@@ -100,7 +109,17 @@ nav a{
     height: 20vw;
     border-radius: 100%;
     background-color: white;
-    transition: 200ms linear
+    transition: 200ms linear;
+    text-align: center;
+    padding-top: 9vw;
+    font-size: 30px;
+    box-sizing: border-box
+}
+
+.services div span{
+    display: none;
+    font-size: 25px;
+    margin: 2vh 2vw
 }
 
 /* PRODUITS & ACCORDEON */
@@ -114,12 +133,28 @@ nav a{
     padding-top: 10vh
 }
 
+.titlesubbed{
+    margin: 0 5vw;
+    color: #fff;
+    font-weight: 100;
+    font-size: 3rem;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    transform: rotate(-85deg) translate(-50%,0);
+    transform-origin: 0 center
+}
+
+.titlesubbed:first-child{
+    transform-origin: 1rem center
+}
+
 .subbed{
     display: none;
     color: #fff;
-    margin: 2vh 5vw;
+    margin: 2vh 10vw;
     font-size: 1.2rem;
     line-height: 1;
+    text-align: justify;
     text-shadow: 0 0 10px rgba(0,0,0,.5)
 }
 
@@ -194,49 +229,55 @@ nav a{
     background-image: url(https://image.noelshack.com/fichiers/2017/10/1488969676-no-mans-sky.jpg);
 }
 
-.titlesubbed{
-    margin: 0 5vw;
-    color: #fff;
-    font-weight: 100;
-    font-size: 4rem;
-    line-height: 1;
-    text-shadow: 0 0 10px rgba(0,0,0,.5)/*;
-        transform: rotate(-85deg)*/
-}
-
 /* CONTACT */
 
 #contact{
     padding: 20vh;
     height: 90vh;
-    text-align: center
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
 }
 
-form{
-    margin: auto;
-    width: 53vw
+.simform{
+    flex: 1
 }
 
-form input{
-    display: block;
-    width: 25vw;
-    margin: 0
+.formresult{
+    overflow: hidden
 }
 
-input[name="name"], input[name="mel"], label{
-    float: left
+.formresult ul{
+    width: 100%;
+    text-align: end
 }
 
-input[name="company"]{
-    width: 51vw
+.formresult ul li{
+    font-size: 0.8em;
+    list-style: none
 }
 
-select{
+.formresult ul li input{
+    border: none;
+    background-color: transparent;
+    color: chartreuse
+}
+
+.butsend{
     float: right;
-    margin-right: 1vw
+    width: 20%;
+    display: none;
+    border: none;
+    background-color: darkgrey;
+    color: red;
+    border-radius: 10%;
+    cursor: pointer
 }
 
-input[name="content"]{
-    width: 51vw;
-    height: 20vh
+.butsend.visio{
+    display: block
+}
+
+.cont{
+    flex: 1
 }
