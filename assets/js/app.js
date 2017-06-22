@@ -3,15 +3,15 @@ $(document).ready(function(){
     $(".services > div").mouseover(function(){
         this.style.height=("35vw");
         this.style.width=("35vw");
-        this.style.paddingTop=("6.5vw");
-        this.style.fontSize=("40px");
+        this.style.paddingTop=("5.5vw");
+        this.style.fontSize=("2.5vw");
         this.querySelector("span").style.display=("block");
         // Et on diminue celle de tout les autres
         $(".services > div").not($(this)).each(function(){
             this.style.height=("15vw");
             this.style.width=("15vw");
-            this.style.paddingTop=("6.5vw");
-            this.style.fontSize=("20px")
+            this.style.paddingTop=("5.5vw");
+            this.style.fontSize=("2vw")
         })
     });
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
         $(".services > div").each(function(){
             this.style.height=("20vw");
             this.style.width=("20vw");
-            this.style.paddingTop=("9vw");
-            this.style.fontSize=("30px");
+            this.style.paddingTop=("5vw");
+            this.style.fontSize=("2.3vw");
             this.querySelector("span").style.display=("none")
         })
     });
