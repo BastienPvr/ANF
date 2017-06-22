@@ -299,7 +299,8 @@ html, body{
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: stretch
+        justify-content: stretch;
+        margin: 10vh 0
     }
 
     .titlesubbed{
@@ -309,6 +310,8 @@ html, body{
         font-weight: 100;
         font-size: 1.7rem;
         line-height: 1;
+        margin-top: 0;
+        margin-bottom: 70px;
         text-shadow: 0 0 10px rgba(0,0,0,.5)
     }
 
