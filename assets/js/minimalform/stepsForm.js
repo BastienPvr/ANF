@@ -133,7 +133,7 @@
         $(".formresult > ul").append("<li><input type='text' name='"+thisquestion+"' value='"+thisinput+"' placeholder='"+thisquestion+"'></li>");
 
         if([].slice.call($(".formresult > ul > li")).length >= 6){
-            document.querySelector(".butsend").classList.add("visio")
+            document.querySelector(".butsend").style.display= "block"
         }
 
         console.log("continue");
